@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper scissor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper" >
+
+        <!-- ScoreBoard -->
+        <div class="scorecard">
+            <div class="title">
+                <p>ROCK</p>
+                <p>PAPER</p>
+                <p>SCISSORS</p>
+            </div>
+            <div class="computerScore">
+                <p>COMPUTER</p>
+                <p>SCORE</p>
+                <h1>0</h1>
+            </div>
+            <div class="yourScore">
+                <p>YOUR</p>
+                <p>SCORE</p>
+                <h1>0</h1>
+            </div>
+        </div>
+
+        <!-- Game Icons -->
+        <div class="hands">
+                <div class="hand rock">
+                    <img src="rock.png" onclick="pickUserHand('rock')">
+                </div>
+                            
+                <div class="hand scissor">
+                    <img src="scissor.png" onclick="pickUserHand('scissor')">
+                    
+                </div>
+             
+                <div class="hand paper">
+                     <img src="paper.png" onclick="pickUserHand('paper')">
+                </div>
+            </div>
+           
+        <!-- Rules Buttton -->
+        <div class="rules">
+            <div class="rules-button" onclick="rulesBtn()">RULES</div>
+        </div>
+
+        <div class="rules-box">
+            <div class="close-button">
+                <span class="close" onclick="closeBtn()">X</span>
+            </div>
+            <div class="rules-list">
+                <h2>Game Rules</h2>
+                <ul>
+                    <li><span class="rule">Rock beats scissors, scissors beat paper, and paper beats rock.</span></li>
+                    <li><span class="rule">Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</span></li>
+                    <li><span class="rule">Use rock, paper, scissors to settle minor decisions or simply play to pass the time</span></li>
+                    <li><span class="rule">If both players lay down the same hand, each player lays down another hand</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="next">
+            <div class="next-button" onclick="pickUserHand()">NEXT</div>
+        </div>
+
+    <!-- Victory Page
+        <div class="hurrayPage">
+            <div class="hurray">
+                <div><img src="/images/trophy.png" alt=""></div>
+                <div><img src="/images/Star 1.png" alt=""></div>
+                <div><img src="/images/Star 2.png" alt=""></div>
+                <div><img src="/images/Star 3.png" alt=""></div>
+                <div><img src="/images/Star 4.png" alt=""></div>
+                <div><img src="/images/Star 5.png" alt=""></div>
+                <div><img src="/images/Star 6.png" alt=""></div>
+                <div><img src="/images/Star 7.png" alt=""></div>
+                <div><img src="/images/Star 9.png" alt=""></div>
+            </div>
+            <p>HURRAY</p>
+            <p>YOU WON THE GAME</p>
+        </div>
+    -->
+
+
+        <!-- Result -->
+        <div class="contest">
+
+            <div class="userPicked">
+                <h1>YOU PICKED</h1>
+                <div class="icons">
+                    <div class="paper">
+                        <img id="userPickImage" src="paper.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="refferee">
+                <div class="result">
+                    <h2>YOU WIN</h2>
+                    <p>AGAINST PC</p>
+                </div>
+                <div class="play-button" onclick="restartGame()">PLAY AGAIN</div>
+            </div>
+
+            <div class="pcPicked">
+                <h1>PC PICKED</h1>
+                 <div class="icons"> 
+                     <div class="scissor"> 
+                            <img id="computerPickImage" src="scissor.png" >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<script src="stone_paper_scissors.js"></script>
+</body>
+</html>
